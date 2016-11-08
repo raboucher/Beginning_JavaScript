@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>Chapter 4, Exercise 2</title>
+</head>
+<body>
+    <script>
+
+        function timesTable(leftHandInt, rightHandInt) {
+
+          for (var counter = leftHandInt; counter <= rightHandInt; counter++) {
+              document.write(leftHandInt + " * " + counter + " = " + (leftHandInt * counter) + "<br/>");
+          }
+        }
+
+        var leftHandInt = prompt("Please enter the left hand integer (also start number) of the times table: ");
+
+        var rightHandInt = prompt("Please enter the right hand integer (also end number) of the times table: ");
+
+        if ((leftHandInt <= 0) || (rightHandInt <= 0)) {
+          alert("You have entered a negative integer. Please enter a posive integer for this program to work correctly.");
+        }
+        if (isNaN(leftHandInt) || isNaN(rightHandInt)) {
+          alert("Your entry is not a number. Please enter a valid positive integer.")
+        }
+        timesTable(leftHandInt, rightHandInt);
+
+    </script>
+</body>
+</html>
